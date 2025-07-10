@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export function useExample() {
-  const [value, setValue] = useState("Hello from SDK!");
+export const useExample = () => {
+  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    console.log("useExample hook initialized");
-  }, []);
+  const increment = () => setCount((prev) => prev + 1);
 
-  return value;
-}
+  return { count, increment };
+};

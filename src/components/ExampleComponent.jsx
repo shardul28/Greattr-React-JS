@@ -1,8 +1,7 @@
 import React from "react";
-import { useExample } from "../hooks/useExample";
 
-export function ExampleComponent() {
-  const value = useExample();
-
-  return <div>{value}</div>;
-}
+export const ExampleComponent = ({ text }) => {
+  return (
+    <div style={{ padding: "10px", backgroundColor: "#f5f5f5" }}>{text}</div>
+  );
+};
