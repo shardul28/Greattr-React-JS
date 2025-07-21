@@ -1,7 +1,6 @@
 import React from "react";
 
-export const ExampleComponent = ({ text }) => {
-  return (
-    <div style={{ padding: "10px", backgroundColor: "#f5f5f5" }}>{text}</div>
-  );
+export const ExampleComponent = (props) => {
+  console.log("React from SDK:", React.version);
+  return <div>Hello from Example Component 2 {props.text} </div>;
 };
